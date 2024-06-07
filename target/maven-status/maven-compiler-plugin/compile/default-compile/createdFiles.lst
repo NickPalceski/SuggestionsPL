@@ -1,0 +1,7 @@
+me\nickpalceski\suggestionspl\SuggestionsCommand.class
+me\nickpalceski\suggestionspl\AddSuggestionCommand.class
+me\nickpalceski\suggestionspl\SuggestionsPL.class
+me\nickpalceski\suggestionspl\DeleteSuggestionCommand.class
+me\nickpalceski\suggestionspl\PlayerChatListener.class
+me\nickpalceski\suggestionspl\Suggestion.class
+me\nickpalceski\suggestionspl\SuggestionsListener.class

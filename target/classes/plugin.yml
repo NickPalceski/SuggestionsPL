@@ -1,0 +1,29 @@
+name: SuggestionsPL
+version: '1.0-SNAPSHOT'
+authors:
+  - BopTart
+  - itstimetogiveup
+main: me.nickpalceski.suggestionspl.SuggestionsPL
+api-version: '1.20'
+description: "Players can vote on top suggestions to add to the server!"
+commands:
+  suggestions:
+    usage: /<command>
+    description: "See the top suggestions."
+  addsuggestion:
+    usage: /<command>
+    description: "Add a suggestion."
+    permission: suggestions.add
+    permission-message: You do not have permission to add suggestions.
+  deletesuggestion:
+    usage: /<command>
+    description: "Delete a suggestion."
+    permission: suggestions.delete
+    permission-message: You do not have permission to delete suggestions.
+permissions:
+  suggestions.add:
+    description: Allows the player to add suggestions.
+    default: op
+  suggestions.delete:
+    description: Allows the player to delete suggestions.
+    default: op
