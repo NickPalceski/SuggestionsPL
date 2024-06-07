@@ -205,11 +205,11 @@ public final class SuggestionsPL extends JavaPlugin {
 
             meta.setLore(lore);
             paper.setItemMeta(meta);
-            gui.setItem(index++, paper);
+            gui.setItem(index++ % (size-5), paper);
         }
 
         // Add navigation arrows if needed
-        if ((size - 9) < suggestions.size()) {
+        if ((size - 9) < (suggestions.size() - (size-9)*page)) {
             ItemStack nextPage = new ItemStack(Material.ARROW);
             ItemMeta nextPageMeta = nextPage.getItemMeta();
             nextPageMeta.setDisplayName(ChatColor.GREEN + "Next Page");
