@@ -36,14 +36,11 @@ public class SuggestionsListener implements Listener {
         }
         event.setCancelled(true);
         ItemStack clickedItem = event.getCurrentItem();
-        if (clickedItem == null || !clickedItem.hasItemMeta()) {
+        if (clickedItem == null) {
             return;
         }
         ItemMeta meta = clickedItem.getItemMeta();
         List<String> lore = meta.getLore();
-        if (lore == null || lore.isEmpty()) {
-            return;
-        }
 
         String displayName = meta.getDisplayName();
 
