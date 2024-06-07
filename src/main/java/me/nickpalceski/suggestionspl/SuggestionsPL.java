@@ -204,7 +204,7 @@ public final class SuggestionsPL extends JavaPlugin {
 
             meta.setLore(lore);
             paper.setItemMeta(meta);
-            gui.setItem(startIndex % 45, paper);
+            gui.setItem(i % 45, paper);
         }
 
         // Add navigation arrows if needed
