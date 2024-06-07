@@ -36,7 +36,7 @@ public class SuggestionsListener implements Listener {
         }
         event.setCancelled(true);
         ItemStack clickedItem = event.getCurrentItem();
-        if (clickedItem == null || !clickedItem.hasItemMeta()) {
+        if (clickedItem == null) {
             return;
         }
         ItemMeta meta = clickedItem.getItemMeta();
