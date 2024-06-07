@@ -180,7 +180,7 @@ public final class SuggestionsPL extends JavaPlugin {
         Inventory gui = Bukkit.createInventory(null, size, "Suggestions Page " + (page + 1));
 
         int endIndex = (page+1) * (size - 9);
-        int index = endIndex * page;
+        int index = (endIndex * page) - 45;
 
         ItemStack glassPane = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
         ItemMeta glassMeta = glassPane.getItemMeta();
