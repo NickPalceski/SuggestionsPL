@@ -41,9 +41,6 @@ public class SuggestionsListener implements Listener {
         }
         ItemMeta meta = clickedItem.getItemMeta();
         List<String> lore = meta.getLore();
-        if (lore == null) {
-            return;
-        }
 
         String displayName = meta.getDisplayName();
 
