@@ -179,8 +179,8 @@ public final class SuggestionsPL extends JavaPlugin {
         int size = 54;
         Inventory gui = Bukkit.createInventory(null, size, "Suggestions Page " + (page + 1));
 
-        int index = 0;
-        int startIndex = page * (size - 9);
+        int endIndex = (page+1) * (size - 9);
+        int index = endIndex * page;
 
         ItemStack glassPane = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
         ItemMeta glassMeta = glassPane.getItemMeta();
@@ -189,7 +189,7 @@ public final class SuggestionsPL extends JavaPlugin {
         glassPane.setItemMeta(glassMeta);
         gui.setItem(size - 5, glassPane); // Add the glass pane to the middle of the last row
 
-        for (int i = startIndex; i < suggestions.size() && index < size - 9; i++) {
+        for (int i = index; i < suggestions.size() && i < endIndex; i++) {
             Suggestion suggestion = suggestions.get(i);
             ItemStack paper = new ItemStack(Material.PAPER);
             ItemMeta meta = paper.getItemMeta();
@@ -209,7 +209,7 @@ public final class SuggestionsPL extends JavaPlugin {
         }
 
         // Add navigation arrows if needed
-        if (startIndex + size - 9 < suggestions.size()) {
+        if ((size - 9) < suggestions.size()) {
             ItemStack nextPage = new ItemStack(Material.ARROW);
             ItemMeta nextPageMeta = nextPage.getItemMeta();
             nextPageMeta.setDisplayName(ChatColor.GREEN + "Next Page");
