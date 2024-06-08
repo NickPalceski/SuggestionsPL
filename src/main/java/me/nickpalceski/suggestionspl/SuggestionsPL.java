@@ -231,11 +231,10 @@ public final class SuggestionsPL extends JavaPlugin {
         //TODO try to fix paging
         int size = 54;
         Inventory gui = Bukkit.createInventory(null, size, "Delete Suggestions Page " + (page + 1));
+        int startIndex = page * (size-9);
+        int endIndex = (page+1) * (size - 9);
 
-        int index = 0;
-        int startIndex = page * (size - 9);
-
-        for (int i = startIndex; i < suggestions.size() && index < size - 9; i++) {
+        for (int i = startIndex; i < suggestions.size() && i < endIndex; ++i) {
             Suggestion suggestion = suggestions.get(i);
             ItemStack paper = new ItemStack(Material.PAPER);
             ItemMeta meta = paper.getItemMeta();
@@ -252,11 +251,11 @@ public final class SuggestionsPL extends JavaPlugin {
 
             meta.setLore(lore);
             paper.setItemMeta(meta);
-            gui.setItem(index++, paper);
+            gui.setItem(i % 45, paper);
         }
 
         // Add navigation arrows if needed
-        if (startIndex + size - 9 < suggestions.size()) {
+        if ((size - 9) < (suggestions.size() - (size-9)*page)) {
             ItemStack nextPage = new ItemStack(Material.ARROW);
             ItemMeta nextPageMeta = nextPage.getItemMeta();
             nextPageMeta.setDisplayName(ChatColor.GREEN + "Next Page");
