@@ -2,6 +2,7 @@ package me.nickpalceski.suggestionspl;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -109,6 +110,7 @@ public class SuggestionsListener implements Listener {
                         plugin.savePlayerVotes();
 
                     } else {
+                        player.playSound(player, Sound.ENTITY_VILLAGER_NO, 0.8f, 0.8f);
                         player.sendMessage(ChatColor.RED + "You have already voted for this suggestion!");
                     }
                 }
@@ -135,6 +137,7 @@ public class SuggestionsListener implements Listener {
                 if (suggestionToRemove != null) {
                     plugin.getSuggestions().remove(suggestionToRemove);
                     plugin.removeVotesForSuggestion(uniqueId);
+                    player.playSound(player, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.8f, 0.8f);
                     player.sendMessage(ChatColor.GREEN + "Suggestion removed: " + suggestionToRemove.getName());
                     player.closeInventory(); // Close the player's inventory
 

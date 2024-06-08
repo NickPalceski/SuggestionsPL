@@ -35,9 +35,11 @@ public final class SuggestionsPL extends JavaPlugin {
         loadSuggestions();
         loadPlayerVotes();
         cleanUpPlayerVotes();
+
         this.getCommand("suggestions").setExecutor(new SuggestionsCommand(this));
         this.getCommand("addsuggestion").setExecutor(new AddSuggestionCommand(this));
         this.getCommand("deletesuggestion").setExecutor(new DeleteSuggestionCommand(this));
+
         Bukkit.getPluginManager().registerEvents(new SuggestionsListener(this), this);
         Bukkit.getPluginManager().registerEvents(new PlayerChatListener(this), this);
     }
