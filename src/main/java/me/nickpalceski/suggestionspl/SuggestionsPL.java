@@ -47,6 +47,7 @@ public final class SuggestionsPL extends JavaPlugin {
         this.getCommand("suggestions").setExecutor(new SuggestionsCommand(this));
         this.getCommand("addsuggestion").setExecutor(new AddSuggestionCommand(this));
         this.getCommand("deletesuggestion").setExecutor(new DeleteSuggestionCommand(this));
+        this.getCommand("reloadsuggestions").setExecutor(new ReloadSuggestionsCommand(this));
 
         Bukkit.getPluginManager().registerEvents(new SuggestionsListener(this), this);
         Bukkit.getPluginManager().registerEvents(new PlayerChatListener(this), this);
@@ -72,6 +73,10 @@ public final class SuggestionsPL extends JavaPlugin {
 
     public String getDiscordLink() {
         return discordLink;
+    }
+
+    public void setDiscordLink(String discordLink) {
+        this.discordLink = discordLink;
     }
 
     private void createSuggestionsFile() {
