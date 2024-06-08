@@ -65,8 +65,15 @@ public class SuggestionsListener implements Listener {
             return;
         }
 
-        // Skip glass pane click handling
+        //handle discord (black stained-glass)
         if (clickedItem.getType() == Material.BLACK_STAINED_GLASS_PANE) {
+            if (lore != null && !lore.isEmpty()) {
+                player.playSound(player, Sound.BLOCK_AMETHYST_BLOCK_BREAK, 0.8f, 0.8f);
+                String discordLink = ChatColor.stripColor(lore.get(0));
+                player.sendMessage(ChatColor.AQUA + "" + ChatColor.BOLD + "         Winter"+ChatColor.BLUE + ""+ChatColor.BOLD+ "Vale");
+                player.sendMessage(ChatColor.LIGHT_PURPLE + "Click the following link to go to our Discord!");
+                player.sendMessage(ChatColor.DARK_PURPLE + discordLink);
+            }
             return;
         }
 
