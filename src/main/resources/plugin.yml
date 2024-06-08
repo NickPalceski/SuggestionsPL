@@ -20,10 +20,18 @@ commands:
     description: "Delete a suggestion."
     permission: suggestions.delete
     permission-message: You do not have permission to delete suggestions.
+  reloadsuggestions:
+    usage: /<command>
+    description: "Reloads the suggestions config."
+    permission: suggestions.reload
+    permission-message: You do not have permission to reload suggestions.
 permissions:
   suggestions.add:
     description: Allows the player to add suggestions.
     default: op
   suggestions.delete:
     description: Allows the player to delete suggestions.
+    default: op
+  suggestions.reload:
+    description: Allows the sender to reload suggestions config.
     default: op
