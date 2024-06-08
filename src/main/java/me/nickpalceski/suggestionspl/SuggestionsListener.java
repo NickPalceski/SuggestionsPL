@@ -118,6 +118,9 @@ public class SuggestionsListener implements Listener {
 
                         // Save after voting
                         plugin.savePlayerVotes();
+                        player.playSound(player, Sound.ENTITY_VILLAGER_YES, 0.8f, 0.8f);
+                        player.sendMessage(ChatColor.GREEN + "You have successfully voted for: " +ChatColor.YELLOW + suggestion.getName());
+                        player.closeInventory();
 
                     } else {
                         player.playSound(player, Sound.ENTITY_VILLAGER_NO, 0.8f, 0.8f);
