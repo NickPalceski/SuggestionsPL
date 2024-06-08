@@ -27,9 +27,17 @@ public final class SuggestionsPL extends JavaPlugin {
     private File suggestionsFile;
     private FileConfiguration playerVotesConfig;
     private File playerVotesFile;
+    private String discordLink;
 
     @Override
     public void onEnable() {
+
+        saveDefaultConfig(); // This saves the default config.yml if it does not exist
+        reloadConfig(); // This reloads the config to ensure we are using the latest values
+
+        discordLink = getConfig().getString("link", "https://discord.gg/yourinvite");
+
+
         createSuggestionsFile();
         createPlayerVotesFile();
         loadSuggestions();
@@ -60,6 +68,10 @@ public final class SuggestionsPL extends JavaPlugin {
 
     public Map<UUID, Map<String, String>> getPlayersAddingSuggestion() {
         return playersAddingSuggestion;
+    }
+
+    public String getDiscordLink() {
+        return discordLink;
     }
 
     private void createSuggestionsFile() {
@@ -186,7 +198,7 @@ public final class SuggestionsPL extends JavaPlugin {
         ItemStack glassPane = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
         ItemMeta glassMeta = glassPane.getItemMeta();
         glassMeta.setDisplayName("Suggest an Idea Here!");
-        glassMeta.setLore(Collections.singletonList("https://discord.gg/yourinvite"));
+        glassMeta.setLore(Collections.singletonList(discordLink));
         glassPane.setItemMeta(glassMeta);
         gui.setItem(size - 5, glassPane); // Add the glass pane to the middle of the last row
 
