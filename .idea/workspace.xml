@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a27b528d-53a3-4634-9668-12c23607c576" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/nickpalceski/suggestionspl/SuggestionsPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/nickpalceski/suggestionspl/SuggestionsPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SuggestionsPL-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/SuggestionsPL-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SuggestionsPL-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/SuggestionsPL-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/nickpalceski/suggestionspl/SuggestionsListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/nickpalceski/suggestionspl/SuggestionsListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/nickpalceski/suggestionspl/SuggestionsPL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/nickpalceski/suggestionspl/SuggestionsPL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-SuggestionsPL-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-SuggestionsPL-1.0-SNAPSHOT.jar" afterDir="false" />
-    </list>
+    <list default="true" id="a27b528d-53a3-4634-9668-12c23607c576" name="Changes" comment="added reload config command" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,11 +20,23 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="reloadconfig" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "NickPalceski",
+    "repository": "SuggestionsPL"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -49,7 +53,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Maven.SuggestionsPL package.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "fixDeletionPaging",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/nicho/OneDrive/Desktop/Github Repos/SuggestionsPL",
@@ -113,6 +117,15 @@
       <workItem from="1717362187690" duration="18527000" />
       <workItem from="1717729008672" duration="5546000" />
     </task>
+    <task id="LOCAL-00001" summary="added reload config command">
+      <option name="closed" value="true" />
+      <created>1717873511255</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717873511255</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,5 +141,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added reload config command" />
+    <option name="LAST_COMMIT_MESSAGE" value="added reload config command" />
   </component>
 </project>
