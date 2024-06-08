@@ -228,7 +228,6 @@ public final class SuggestionsPL extends JavaPlugin {
     }
 
     public void openSuggestionsGUIForDeletion(Player player, int page) {
-        //TODO try to fix paging
         int size = 54;
         Inventory gui = Bukkit.createInventory(null, size, "Delete Suggestions Page " + (page + 1));
         int startIndex = page * (size-9);
