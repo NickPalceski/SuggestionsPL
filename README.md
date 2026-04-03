@@ -11,7 +11,4 @@ This was a huge learning experience for me and I had a lot of fun having to test
 As a software engineering undergraduate, this was a great opportunity to apply myself to something related to my career aspirations.
 
 
-# More Than Meets The Eye
- Yes I know, this is hardly something someone can be amazed at. I myself, was amazed. I decided to continue this project. I like the idea I had with player suggestions and I stuck with it. I am now currently developing (hopefully) a better, more improved version of SuggestionsPL... **SuggestionsX**! Feel free to check it out as it will remain open source on my git-hub for anybody to look at or use :)
-
 
